@@ -5,7 +5,7 @@ Desenvolvido em **Python** com **FastAPI**, testes automatizados com **pytest** 
 
 ---
 
-## 🚀 Funcionalidades
+#### 🚀 Funcionalidades
 
 - Integração com API Groq para respostas inteligentes.
 - Endpoints REST desenvolvidos com **FastAPI**.
@@ -15,7 +15,7 @@ Desenvolvido em **Python** com **FastAPI**, testes automatizados com **pytest** 
 
 ---
 
-## 📦 Requisitos
+#### 📦 Requisitos
 
 - **Python** 3.10 ou superior
 - Conta e **API Key** do [Groq](https://groq.com/)
@@ -23,7 +23,7 @@ Desenvolvido em **Python** com **FastAPI**, testes automatizados com **pytest** 
 
 ---
 
-## ⚙️ Instalação
+#### ⚙️ Instalação
 
 1. **Clone o repositório**
    ```bash
@@ -52,7 +52,7 @@ Desenvolvido em **Python** com **FastAPI**, testes automatizados com **pytest** 
 
 ---
 
-## ▶️ Execução
+#### ▶️ Execução
 
 Para iniciar o servidor local:
 
@@ -72,7 +72,7 @@ http://127.0.0.1:8000/docs
 
 ---
 
-## 🧪 Testes
+#### 🧪 Testes
 
 Para rodar os testes:
 
