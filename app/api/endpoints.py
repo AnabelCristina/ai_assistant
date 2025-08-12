@@ -1,8 +1,11 @@
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import JSONResponse
+from pydantic import BaseModel
 from app.services.groq_service import groq_service
 
 router = APIRouter()
+class QuestionRequest(BaseModel):
+    question: str
 
 @router.get("/health")
 async def health_check():
@@ -12,11 +15,11 @@ async def health_check():
     )
 
 @router.post("/question-and-answer")
-async def question_answer(question: str):
+async def question_answer(request: QuestionRequest):
     try:
         prompt = (
             "Como assistente de vendas especializado em produtos para pets, "
-            f"responda esta pergunta de forma clara e útil: {question}\n"
+            f"responda esta pergunta de forma clara e útil: {request.question}\n"
             "Dê recomendações específicas de produtos PETLOV quando possível."
         )
         

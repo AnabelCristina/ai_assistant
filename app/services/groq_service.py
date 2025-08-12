@@ -4,12 +4,15 @@ from app.core.config import settings
 from fastapi import HTTPException
 
 class GroqService:
-    def __init__(self):
-        self.client = Groq(api_key=settings.GROQ_API_KEY)
+    def __init__(self, client=None):
+        self.client = client or Groq(api_key=settings.GROQ_API_KEY)
         self.default_model = settings.GROQ_DEFAULT_MODEL 
 
     async def generate_response(self, prompt: str, model: str = None) -> str:
         try:
+            if not prompt.strip():
+                raise ValueError("A pergunta não pode estar vazia")
+            
             model = model or self.default_model
 
             messages = [
