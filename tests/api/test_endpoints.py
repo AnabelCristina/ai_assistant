@@ -17,5 +17,4 @@ async def test_question_endpoint(test_client):
         "/api/question-and-answer",
         json=payload
     )
-    
     assert response.status_code == 200

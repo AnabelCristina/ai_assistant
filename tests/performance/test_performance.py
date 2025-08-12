@@ -1,4 +1,3 @@
-from http import client
 import time
 
 def test_response_time(test_client):
